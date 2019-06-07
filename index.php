@@ -404,12 +404,12 @@
 				<div class="row">
 					<div class="col-sm-12 fisica">
 						<label>CPF</label>
-						<input type="text" id="fisica" name="cpf" class="form-control" placeholder="000.000.000-00" maxlength="14" onblur="javascript: validaCPF();" onkeydown="javascript: fMasc( this, mCPF );">
+						<input type="text" id="cpf" name="cpf" class="form-control" placeholder="000.000.000-00" maxlength="14" onblur="javascript: validaCPF();" onkeydown="javascript: fMasc( this, mCPF );">
 						<br/>
 					</div>
 					<div class="col-sm-12 juridica">
 						<label>CNPJ</label>
-						<input type="text" name="juridica" id="cnpj" onkeyup="FormataCnpj(this,event)" placeholder="00.000.000/0000-00" onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}" maxlength="18"  class="form-control" onkeydown="javascript: fMasc( this, mCNPJ );">
+						<input type="text" id="cnpj" name="cnpj" onkeyup="FormataCnpj(this,event)" placeholder="00.000.000/0000-00" onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}" maxlength="18"  class="form-control" onkeydown="javascript: fMasc( this, mCNPJ );">
 						<br/>
 					</div>
 				</div>
@@ -620,14 +620,13 @@
 
 
 <script>
-/*
 //VALIDANDO O CPF
 function validaCPF() {
-    if (valida_cpf(document.getElementById('fisica').value))
+    if (valida_cpf(document.getElementById('cpf').value))
         return false;
     else
         alert('CPF Inválido');
-        document.getElementById('fisica').value = ''; //limpa o campo cpf
+        document.getElementById('cpf').value = ''; //limpa o campo cpf
 
 //        document.cadastro.pk_usuario_cpf.focus(); //da foco ao campo
 
@@ -676,11 +675,10 @@ function valida_cpf(cpf) {
     }
     else
         return false;
-}*/
+}
 
 </script>
 <script>
-/*
 //VALIDANDO O CNPJ OU PELO MENOS TENTANDO
 	function FormataCnpj(campo, teclapres)
 			{
@@ -755,7 +753,7 @@ function validarCNPJ(cnpj) {
 
     return true;
 }
-/*
+
 </script>
 
 
