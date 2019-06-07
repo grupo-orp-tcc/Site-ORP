@@ -1,5 +1,6 @@
 <?php
   require_once "conexao.php";
+  session_start();
 
   if(isset($_FILES['arquivo'])){
     $extensao = strtolower(substr($_FILES['arquivo']['name'], -4));
@@ -15,14 +16,15 @@
     $genero = $_POST['genero'];
     //$tamanho = $_POST['tamanho'];
     $material = $_POST['material'];
+    $id_forn = $_SESSION['id'];
 
-    $query = "INSERT INTO produto (nomeProd, qtddProd, precoProd, tipoProd, descriProd, generoProd, tamanhoProd, materialProd, imgProd, dataCadProd)
-      VALUES ('$nome', '$quantidade', '$preco', '$tipo', '$descricao', '$genero', 'Ainda não', '$material', '$imagem', NOW())";
+    $query = "INSERT INTO produto (nomeProd, qtddProd, precoProd, tipoProd, descriProd, generoProd, tamanhoProd, materialProd, imgProd, id_fornecedor, dataCadProd)
+      VALUES ('$nome', '$quantidade', '$preco', '$tipo', '$descricao', '$genero', 'Ainda não', '$material', '$imagem', '$id_forn', NOW())";
     $cadastrar = mysqli_query ($con, $query);
 
     if ($cadastrar == 1){
       echo "<script>alert('Dados inseridos com sucesso!');
-        location.href='pesquisa.php'</script>";
+        location.href='perfil.php'</script>";
     }
     else {
       echo "<script>alert('Erro ao cadastrar produto!');
@@ -84,7 +86,6 @@
                                     <option value="blusa">Blusa</option>
                                     <option value="bermuda">Bermuda</option>
                                     <option value="camisa">Camisa</option>
-
                                     <option value="calca">Calça</option>
                                     <option value="jaqueta">Jaqueta</option>
                                     <option value="roupao">Roupão</option>
@@ -191,7 +192,6 @@
             </div>
         </div>
     </div>
-
     <!-- Jquery JS-->
     <script src="js/jquery.min.js"></script>
     <!-- Select JS-->
