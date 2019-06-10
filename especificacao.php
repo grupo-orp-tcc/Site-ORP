@@ -83,7 +83,38 @@
 				</div>
 				<div class="form-group row marg">
 					<div class="col-sm-8 col-md-2">
-						<input type="button" class="btn font-weight-bold" value="Comprar">
+						<!-- Set up a container element for the button -->
+							    <div id="paypal-button-container"></div>
+
+							    <!-- Include the PayPal JavaScript SDK -->
+							    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=BRL"></script>
+
+							    <script>
+							        // Render the PayPal button into #paypal-button-container
+							        paypal.Buttons({
+
+							            // Set up the transaction
+							            createOrder: function(data, actions) {
+							                return actions.order.create({
+							                    purchase_units: [{
+							                        amount: {
+							                            value: '155000.00'
+							                        }
+							                    }]
+							                });
+							            },
+
+							            // Finalize the transaction
+							            onApprove: function(data, actions) {
+							                return actions.order.capture().then(function(details) {
+							                    // Show a success message to the buyer
+							                    alert('Compra Concluida ' + details.payer.name.given_name + '!');
+							                });
+							            }
+
+
+							        }).render('#paypal-button-container');
+							    </script>
 					</div>
 				</div>
 		</div>
