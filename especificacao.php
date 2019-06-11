@@ -84,7 +84,7 @@
 				<div class="form-group row marg">
 					<div class="col-sm-8 col-md-2">
 						<!-- Set up a container element for the button -->
-							    <div id="paypal-button-container"></div>
+							    <div name="paypal" id="paypal-button-container"></div>
 
 							    <!-- Include the PayPal JavaScript SDK -->
 							    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=BRL"></script>
