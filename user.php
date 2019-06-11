@@ -11,11 +11,8 @@
 	    					<input id="file-input" style="cursor:pointer;" type="file" accept="image/jpeg,.jpg,image/png,.png,.jpeg,image/webp,.webp"/>
 							</div>
 							<?php
+								require_once "crud/select.php";
 							 	if(isset($_SESSION['cliente'])){
-									$id = $_SESSION['id'];
-	              	$query = "SELECT nome, cpf, tel_cel FROM cad_cliente WHERE id_cli = '$id'";
-	              	$executar = mysqli_query($con, $query);
-	              	$info = mysqli_fetch_array($executar);
 							?>
 									<center>
 										<label><?php echo $info["nome"]?></label>
@@ -24,12 +21,7 @@
 										<br/><label>Redes Sociais</label>
 									</center>
 							<?php
-								}
-								else{
-									$id = $_SESSION['id'];
-									$query = "SELECT nome_empresa, cnpj, tel_cel FROM cad_fornecedor WHERE id_forne = '$id'";
-									$exe = mysqli_query($con, $query);
-									$info = mysqli_fetch_array($exe);
+						}else{
 							?>
 									<center>
 										<label><?php echo $info["nome_empresa"]?></label>

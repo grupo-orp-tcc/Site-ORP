@@ -3,7 +3,7 @@
 <?php
 	require_once "conexao.php";
 	session_start();
-	$idProd = $_GET["idProd"];
+	$idProd = $_GET["editProd"];
 	$query = "SELECT * FROM produto WHERE idProd = $idProd";
 	$exibir = mysqli_query($con, $query);
 	$mostrar = mysqli_fetch_array($exibir);
@@ -25,7 +25,6 @@
 	require_once "menu.php";
 ?>
 	<!-- fim menu -->
-
 	<!-- inicio conteudo -->
 
 <div class="container col-md-9 mb-4">
@@ -51,20 +50,12 @@
 				</div>
 		</div>
 		<div class="col-lg-5" id="borda-prod">
-			<h3 class="page-header titu" align="center"><?php echo $mostrar["nomeProd"]?></h3>
+			<h3 class="page-header titu" align="center"><input type="text" name="nome" class="form-control" value="<?php echo $mostrar["nomeProd"]?>"></h3>
 			<form id="espe" class="form-horizontal" action="#" method="post">
 				<!-- Preco  -->
 				<div class="form-group row marg">
-					<h5 class="col-sm-3 col-md-8"><?php echo $mostrar["qtddProd"]?> peças por: R$<?php echo $mostrar["precoProd"]?></h5>
-				</div>
-				<div class="form-group row marg">
-					<div class="col-sm-5 col-md-12">
-						<center>
-						<button type="button" id="teste" class="btn" data-toggle="modal"
-							data-target="#ModalEsp">
-							Formas de Pagamento
-					</div>
-				</center>
+					<h5 class="col-sm-3 col-md-8"><input type="text" name="nome" class="form-control" value="<?php echo $mostrar["qtddProd"]?>">
+            <br/>peças por: R$<input type="text" name="nome" class="form-control" value="<?php echo $mostrar["precoProd"]?>"></h5>
 				</div>
 				<br/>
 				<div class="form-group row marg">
@@ -78,37 +69,11 @@
 								<button type="button" class="btn">Calcular</button>
 						</div>
 				</div>
-				<div name="paypal" id="paypal-button-container"></div>
-
-				<!-- Include the PayPal JavaScript SDK -->
-				<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=BRL"></script>
-
-				<script>
-						// Render the PayPal button into #paypal-button-container
-						paypal.Buttons({
-
-								// Set up the transaction
-								createOrder: function(data, actions) {
-										return actions.order.create({
-												purchase_units: [{
-														amount: {
-																value: '155000.00'
-														}
-												}]
-										});
-								},
-
-								// Finalize the transaction
-								onApprove: function(data, actions) {
-										return actions.order.capture().then(function(details) {
-												// Show a success message to the buyer
-												alert('Compra Concluida ' + details.payer.name.given_name + '!');
-										});
-								}
-
-
-						}).render('#paypal-button-container');
-				</script>
+				<div class="form-group row marg ml-5">
+					<div class="col-sm-12 col-md-4 ml-4">
+						<input type="button" class="btn bg-warning" value="Editar Dados do Produto">
+					</div>
+				</div>
 		</div>
 	</div>
 	</form>

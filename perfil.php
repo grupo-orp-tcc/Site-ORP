@@ -2,6 +2,11 @@
 <?php
 	require_once "conexao.php";
 	session_start();
+	$id_pro = $_SESSION['id'];
+	if(isset($_SESSION['fornecedor'])){
+		$prod = "SELECT * FROM produto WHERE id_fornecedor=$id_pro ORDER BY dataCadProd DESC";
+		$pegar = mysqli_query($con, $prod);
+	}
 ?>
 <html lang="pt-br">
 <head>
@@ -25,9 +30,8 @@
 		<?php
 			require_once "user.php";
 		?>
-
-	  			<div id="l-produtos" class="col-9">
-	    			<div id="card-prod" class="card">
+	  			<div id="l-produtos" class="row mt-1">
+	    			<div id="card-prod" class="card container">
 	        		<div class="card-body">
 								<?php
 									if(isset($_SESSION['cliente'])){
@@ -38,139 +42,34 @@
 									else{
 								?>
 										<h5 style="text-align: center;">Meus Produtos</h5>
+										<div class="card-group">
+											<!--Inicio da primeira linha de produtos-->
+										<?php
+											while($buscar = mysqli_fetch_array($pegar)){
+										?>
+											<div class="col-sm-4">
+												<div class="card">
+													<a href="edit-prod.php?editProd=<?php echo $buscar["idProd"]?>">
+														<div class="card-body">
+																<img src="produtos/<?php echo $buscar["imgProd"]?>" style="width: 10rem; height: 10rem;"/>
+														</div>
+													</a>
+												</div>
+											</div>
+										<?php
+											}
+										?>
+									</div>
 								<?php
 									}
 								?>
-	       				<div class="row">
-	       				<!--Inicio da primeira linha de produtos-->
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P1</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P2</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				   			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P3</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P4</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				  <!--Fim da primeira linha de produtos-->
-				  <!--Inicio da segunda linha de produtos-->
-							<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P1</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P2</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				   			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P3</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P4</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				<!--Fim da segunda linha de produtos-->
-				       				<!--Inicio da primeira linha de produtos-->
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P1</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P2</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				   			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P3</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P4</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				  <!--Fim da primeira linha de produtos-->
-				  <!--Inicio da segunda linha de produtos-->
-							<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P1</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P2</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				   			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				       					<h5 class="card-title">P3</h5>
-				      				</div>
-				    			</div>
-				  			</div>
-				  			<div class="col-sm-3">
-				    			<div class="card">
-				      				<div class="card-body">
-				        				<h5 class="card-title">P4</h5>
-				     	 			</div>
-				    			</div>
-				  			</div>
-				<!--Fim da segunda linha de produtos-->
-
-						</div>
 
 
 					</div>
 					<?php
 						if(isset($_SESSION['fornecedor'])){
 					?>
-					<div class="center pt-lg-4">
+					<div class="center pt-lg-4 mb-3">
 						<a href="cadastro-prod.php">
 						<button type="button" class="btn btn-warning">
 								Adicionar Produto
@@ -192,8 +91,6 @@
 			?>
 		<!-- Fim rodape -->
 <!-- fim rodape -->
-
-
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

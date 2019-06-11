@@ -77,7 +77,7 @@
 <div class="conteiner-fluid">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+    <li class="breadcrumb-item">Home</li>
     <li class="breadcrumb-item active"><?php echo $pag?></li>
 		<li class="breadcrumb-item active"><?php echo $filtro?></li>
   </ol>
