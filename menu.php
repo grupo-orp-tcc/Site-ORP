@@ -99,9 +99,6 @@
 						</ul>
 					</li>
 				</ul>
-				<button type="button" id="procurar" class="btn" data-toggle="modal" data-target="#exampleModal">
-					Entrar
-				</button>
 			<!-- login -->
 				<div id="aa" class="ml-2">
 					<ul class="navbar-nav mr-auto">
@@ -140,7 +137,9 @@
 								}
 							else{
 							?>
-									
+							<button type="button" id="procurar" class="btn" data-toggle="modal" data-target="#exampleModal">
+								Entrar
+							</button>		
 							<?php
 								}
 							?>
