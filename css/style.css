@@ -243,3 +243,9 @@ border-radius: 3%
 .esp {margin-left: 4%;
 		margin-right: 4%;}
 		.inicio{margin-top:6%}
+.pesquisa {
+  border-radius: 20px;
+  border-color: #444444a1;
+  box-shadow: none;
+  width: 30%;
+}
