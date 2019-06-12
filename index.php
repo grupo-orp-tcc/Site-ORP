@@ -42,16 +42,16 @@
 				<img class="d-block img-fluid mt-5" src="img/carousel/slide-1.png">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block img-fluid" src="img/carousel/slide-2.png">
+				<img class="d-block img-fluid mt-5" src="img/carousel/slide-2.png">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block img-fluid" src="img/carousel/slide-3.png">
+				<img class="d-block img-fluid mt-5" src="img/carousel/slide-3.png">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block img-fluid" src="img/carousel/slide-4.png">
+				<img class="d-block img-fluid mt-5" src="img/carousel/slide-4.png">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block img-fluid" src="img/carousel/slide-5.png">
+				<img class="d-block img-fluid mt-5" src="img/carousel/slide-5.png">
 			</div>
 		</div>
 		<div class="d-none d-md-block">
