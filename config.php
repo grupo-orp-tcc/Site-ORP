@@ -123,7 +123,7 @@
 		</div>
 		<!--Fim Editar conteudo-->
 		</form>
-		<form action="crud/delete.php">
+		<form action="delete.php">
 		<div class="col-sm-12" id="config-botton">
 			<br/>
 					<input name="desativar" value="Desativar minha conta"  class="btn bg-warning" type="submit">
