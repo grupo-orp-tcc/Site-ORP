@@ -1,0 +1,10 @@
+/* css para rolagem da pagina */
+.menu-diferente {
+    background-color: #bebebee8 !important;
+    box-shadow: 0px 4px #ffe6028f;
+}
+
+.logo {
+    width: 150px; 
+    height: 90px;
+}
