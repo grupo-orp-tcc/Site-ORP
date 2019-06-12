@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	require_once "conexao.php";
-	session_start();
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -99,6 +99,7 @@
 						</ul>
 					</li>
 				</ul>
+				
 			<!-- login -->
 				<div id="aa" class="ml-2">
 					<ul class="navbar-nav mr-auto">
@@ -137,9 +138,9 @@
 								}
 							else{
 							?>
-							<button type="button" id="procurar" class="btn" data-toggle="modal" data-target="#exampleModal">
-								Entrar
-							</button>		
+								<button type="button" id="procurar" class="btn" data-toggle="modal" data-target="#exampleModal">
+					Entrar
+				</button>	
 							<?php
 								}
 							?>
