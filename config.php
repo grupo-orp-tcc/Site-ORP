@@ -24,10 +24,10 @@
 			require_once "user.php";
 		?>
 		<!--Fim perfil do usuario-->
-		<form action="crud/update.php" method="post" id="configuracoes">
+		<form action="update.php" method="post" id="configuracoes">
 		<!--Inicio Editar conteudo-->
 
-		<div class="card container col-sm-9 mt-4">
+		<div class="container col-sm-9 mt-4">
 		<br/>
 		<center><h2>Configurações</h2><br/></center>
 			<div class="row">
