@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+	require_once "conexao.php";
+	session_start();
+?>
 
 <html lang="pt-br">
 <head>
@@ -12,16 +16,18 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/sweetalert2.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styleMenu.css">
 </head>
 <body>
 <!-- inicio menu -->
-<!-- inicio menu -->
-<?php
-	require_once "menu.php";
-?>
-<!-- inicio conteudo -->
+	<?php
+		require_once "menu.php";
+	?>
+	<div class="container-fluid">
+		
+	
 <!-- inicio carousel -->
-	<div id="carroselsite" class="carousel slide" data-ride="carousel">
+	<div id="carroselsite" class="carousel slide " data-ride="carousel">
 		<div class="carousel-inner mt-5">
 			<div class="d-none d-md-block">
 				<ol class="carousel-indicators">
@@ -33,7 +39,7 @@
 				</ol>
 			</div>
 			<div class="carousel-item active">
-				<img class="d-block img-fluid" src="img/carousel/slide-1.png">
+				<img class="d-block img-fluid mt-5" src="img/carousel/slide-1.png">
 			</div>
 			<div class="carousel-item">
 				<img class="d-block img-fluid" src="img/carousel/slide-2.png">
@@ -59,190 +65,203 @@
 			</a>
 		</div>
 	</div>
+	</div>
 <!-- card fileira 1 -->
 	<div class="divider-t mt-5"></div>
 	<h3 class="mt-3 text-center">Destaques da Semana</h3>
-	<div class="row my-5 mx-2">
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_f/vestido-01.jpg">
+	<div class="row mx-5">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r1.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Vestido florido</h5>
-						<div class="divider-b"></div>
-						<p class="card-text text-dark">10 peças de cores variadas.</p>
-						<p class="card-text text-dark">Nome do fornecedor</p>
-						<h3 class="card-title text-dark">Preço: R$148,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_m/blusa/blusa-02.jpeg">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r1.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Blusa da manga comprida</h5>
-							<div class="divider-b"></div>
-						<p class="card-text text-dark">13 peças de tamanhos variadas.</p>
-						<p class="card-text text-dark">Nome do fornecedor</p>
-						<h3 class="card-title text-dark">Preço: R$156,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_f/vestido-03.jpg">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r1.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Vestido com bordas de borboletas</h5>
-							<div class="divider-b"></div>
-						<p class="card-text text-dark">13 peças de tamanhos variadas.</p>
-						<p class="card-text text-dark">Nome do fornecedor</p>
-						<h3 class="card-title text-dark">Preço: R$116,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_i/kit-08.png">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r1.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Kit infantil feminino</h5>
-							<div class="divider-b"></div>
-						<p class="card-text text-dark">13 peças de cores variadas.</p>
-						<h3 class="card-title text-dark">Preço: R$126,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
-	</div>
 	</div>
 
-<!-- card fileira 3 -->
+<!-- card fileira 2 -->
 	<div class="divider-t mt-5"></div>
 	<h3 class="mt-3 text-center">Em alta</h3>
 	<div class="row my-5 mx-2">
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_i/kit-01.png">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r2.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Kit infantil masculina</h5>
-						<div class="divider-b"></div>
-						<p class="card-text text-dark">10 conjuntos de cores variadas.</p>
-						<p class="card-text text-dark">Nome do fornecedor</p>
-						<h3 class="card-title text-dark">Preço: R$105,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_f/blusa/blusa-02.png">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r2.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Blusa feminina</h5>
-						<div class="divider-b"></div>
-						<p class="card-text text-dark">15 conjuntos de diferentes tamanhos.</p>
-						<p class="card-text text-dark">Nome do fornecedor</p>
-						<h3 class="card-title text-dark">Preço: R$120,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_m/blusa/blusa-01.jpeg">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r2.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Blusa de frio masculino</h5>
-						<div class="divider-b"></div>
-						<p class="card-text text-dark">10 peças de cores variadas.</p>
-						<p class="card-text text-dark">Nome do fornecedor</p>
-						<h3 class="card-title text-dark">Preço: R$112,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
-		<div class="col-sm-3">
-			<div class="card mb-3" style="width: 18rem; height: 30rem;">
-				<a href="#" class="card-link">
-					<img class="card-img-top box" src="img/prod_f/blusa/blusa-04.png">
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r2.png" alt="Imagem de capa do card">
 					<div class="card-body">
-						<h5 class="card-subtitle text-muted">Blusa com detalhes na frente</h5>
-						<div class="divider-b"></div>
-						<p class="card-text text-dark">12 peças de cores variadas.</p>
-						<p class="card-text text-dark">Nome do fornecedor</p>
-						<h3 class="card-title text-dark">Preço: R$98,00</h3>
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
 					</div>
-				</a>
-			</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
 		</div>
 	</div>
 <!-- card fileira 3 -->
 <div class="divider-t mt-5"></div>
 <h3 class="mt-3 text-center">Promoções da Semana</h3>
 <div class="row my-5 mx-2">
-	<div class="col-sm-3">
-		<div class="card mb-3" style="width: 18rem; height: 30rem;">
-			<a href="#" class="card-link">
-				<img class="card-img-top box" src="img/prod_i/kit-01.png">
-				<div class="card-body">
-					<h5 class="card-subtitle text-muted">Kit infantil masculina</h5>
-					<div class="divider-b"></div>
-					<p class="card-text text-dark">10 conjuntos de cores variadas.</p>
-					<p class="card-text text-dark">Nome do fornecedor</p>
-					<h3 class="card-title text-dark">Preço: R$105,00</h3>
+	<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r3.png" alt="Imagem de capa do card">
+					<div class="card-body">
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r3.png" alt="Imagem de capa do card">
+					<div class="card-body">
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r3.png" alt="Imagem de capa do card">
+					<div class="card-body">
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<a href="#" class="text-dark">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="img/prod_m/r3.png" alt="Imagem de capa do card">
+					<div class="card-body">
+						<h5 class="card-title center">Título da Roupa </h5>
+						<h4 href="#" class="card-link">R$ 450,00</h4>
+						<p class="card-text">Quantidade de Roupas 10</p>
+					</div>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Tamanhos: M, G.</li>
+					</ul>				
 				</div>
 			</a>
 		</div>
 	</div>
-	<div class="col-sm-3">
-		<div class="card mb-3" style="width: 18rem; height: 30rem;">
-			<a href="#" class="card-link">
-				<img class="card-img-top box" src="img/prod_f/blusa/blusa-02.png">
-				<div class="card-body">
-					<h5 class="card-subtitle text-muted">Blusa feminina</h5>
-					<div class="divider-b"></div>
-					<p class="card-text text-dark">15 conjuntos de diferentes tamanhos.</p>
-					<p class="card-text text-dark">Nome do fornecedor</p>
-					<h3 class="card-title text-dark">Preço: R$120,00</h3>
-				</div>
-			</a>
-		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="card mb-3" style="width: 18rem; height: 30rem;">
-			<a href="#" class="card-link">
-				<img class="card-img-top box" src="img/prod_m/blusa/blusa-01.jpeg">
-				<div class="card-body">
-					<h5 class="card-subtitle text-muted">Blusa de frio masculino</h5>
-					<div class="divider-b"></div>
-					<p class="card-text text-dark">10 peças de cores variadas.</p>
-					<p class="card-text text-dark">Nome do fornecedor</p>
-					<h3 class="card-title text-dark">Preço: R$112,00</h3>
-				</div>
-			</a>
-		</div>
-	</div>
-	<div class="col-sm-3">
-		<div class="card mb-3" style="width: 18rem; height: 30rem;">
-			<a href="#" class="card-link">
-				<img class="card-img-top box" src="img/prod_f/blusa/blusa-04.png">
-				<div class="card-body">
-					<h5 class="card-subtitle text-muted">Blusa com detalhes na frente</h5>
-					<div class="divider-b"></div>
-					<p class="card-text text-dark">12 peças de cores variadas.</p>
-					<p class="card-text text-dark">Nome do fornecedor</p>
-					<h3 class="card-title text-dark">Preço: R$98,00</h3>
-				</div>
-			</a>
-		</div>
-	</div>
-</div>
 
 <!--car dileira 4-->
 	<div class="divider-t mt-4"></div>
@@ -456,9 +475,10 @@
 </div>
 
 <!-- arquivos javascript -->
-	<script src="js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.js"></script>
+    <script src="js/menu.js"></script>
 	<script src="js/validacoes.js"></script>
 
 	<?php
@@ -613,146 +633,4 @@
 	}
 
 	?>
-
-
-<script>
-/*
-//VALIDANDO O CPF
-function validaCPF() {
-    if (valida_cpf(document.getElementById('fisica').value))
-        return false;
-    else
-        alert('CPF Inválido');
-        document.getElementById('fisica').value = ''; //limpa o campo cpf
-
-//        document.cadastro.pk_usuario_cpf.focus(); //da foco ao campo
-
-
-        return false;
-}
-function valida_cpf(cpf) {
-	var aux = "";
-    for (i = 0; i <= cpf.length; i++)
-	{
-        if ((cpf.charAt(i) != ".") && (cpf.charAt(i) != "-"))
-		{
-            aux += cpf.charAt(i);
-		}
-	}
-	cpf=aux;
-    var numeros, digitos, soma, i, resultado, digitos_iguais;
-
-    digitos_iguais = 1;
-    if (cpf.length < 11)
-        return false;
-    for (i = 0; i < cpf.length - 1; i++)
-        if (cpf.charAt(i) != cpf.charAt(i + 1))
-        {
-            digitos_iguais = 0;
-            break;
-        }
-    if (!digitos_iguais)
-    {
-        numeros = cpf.substring(0, 9);
-        digitos = cpf.substring(9);
-        soma = 0;
-        for (i = 10; i > 1; i--)
-            soma += numeros.charAt(10 - i) * i;
-        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-        if (resultado != digitos.charAt(0))
-            return false;
-        numeros = cpf.substring(0, 10);
-        soma = 0;
-        for (i = 11; i > 1; i--)
-            soma += numeros.charAt(11 - i) * i;
-        resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-        if (resultado != digitos.charAt(1))
-            return false;
-        return true;
-    }
-    else
-        return false;
-}*/
-
-</script>
-<script>
-/*
-//VALIDANDO O CNPJ OU PELO MENOS TENTANDO
-	function FormataCnpj(campo, teclapres)
-			{
-				var tecla = teclapres.keyCode;
-				var vr = new String(campo.value);
-				vr = vr.replace(".", "");
-				vr = vr.replace("/", "");
-				vr = vr.replace("-", "");
-				tam = vr.length + 1;
-				if (tecla != 14)
-				{
-					if (tam == 3)
-						campo.value = vr.substr(0, 2) + '.';
-					if (tam == 6)
-						campo.value = vr.substr(0, 2) + '.' + vr.substr(2, 5) + '.';
-					if (tam == 10)
-						campo.value = vr.substr(0, 2) + '.' + vr.substr(2, 3) + '.' + vr.substr(6, 3) + '/';
-					if (tam == 15)
-						campo.value = vr.substr(0, 2) + '.' + vr.substr(2, 3) + '.' + vr.substr(6, 3) + '/' + vr.substr(9, 4) + '-' + vr.substr(13, 2);
-				}
-			}
-
-
-function validarCNPJ(cnpj) {
-
-    cnpj = cnpj.replace(/[^\d]+/g,'');
-    if(cnpj == '') return false;
-
-    if (cnpj.length != 14)
-        return false;
-
-    // Elimina CNPJs invalidos conhecidos
-    if (cnpj == "00000000000000" ||
-        cnpj == "11111111111111" ||
-        cnpj == "22222222222222" ||
-        cnpj == "33333333333333" ||
-        cnpj == "44444444444444" ||
-        cnpj == "55555555555555" ||
-        cnpj == "66666666666666" ||
-        cnpj == "77777777777777" ||
-        cnpj == "88888888888888" ||
-        cnpj == "99999999999999")
-        return false;
-
-    // Valida DVs
-    tamanho = cnpj.length - 2
-    numeros = cnpj.substring(0,tamanho);
-    digitos = cnpj.substring(tamanho);
-    soma = 0;
-    pos = tamanho - 7;
-    for (i = tamanho; i >= 1; i--) {
-      soma += numeros.charAt(tamanho - i) * pos--;
-      if (pos < 2)
-            pos = 9;
-    }
-    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-    if (resultado != digitos.charAt(0))
-        return false;
-
-    tamanho = tamanho + 1;
-    numeros = cnpj.substring(0,tamanho);
-    soma = 0;
-    pos = tamanho - 7;
-    for (i = tamanho; i >= 1; i--) {
-      soma += numeros.charAt(tamanho - i) * pos--;
-      if (pos < 2)
-            pos = 9;
-    }
-    resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-    if (resultado != digitos.charAt(1))
-          return false;
-
-    return true;
-}
-/*
-</script>
-
-
 </html>
