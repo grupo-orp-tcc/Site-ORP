@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	require_once "conexao.php";
-	
+	session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<img src="img/menu_icon.png" width="30" height="30">
       		</button>
-      
+
 		<!-- menu -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
     			<div class="center">
@@ -99,11 +99,10 @@
 						</ul>
 					</li>
 				</ul>
-				
 			<!-- login -->
 				<div id="aa" class="ml-2">
 					<ul class="navbar-nav mr-auto">
-						<li>						
+						<li>
 						<?php
 							if(isset($_SESSION['fornecedor'])){
 						?>
@@ -138,9 +137,9 @@
 								}
 							else{
 							?>
-								<button type="button" id="procurar" class="btn" data-toggle="modal" data-target="#exampleModal">
-					Entrar
-				</button>	
+							<button type="button" id="procurar" class="btn" data-toggle="modal" data-target="#exampleModal">
+								Entrar
+							</button>
 							<?php
 								}
 							?>
@@ -149,11 +148,9 @@
 			</div>
 		</div>
 	</nav>
-	
 	<script src="js/jquery.js"></script>
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.js"></script>
     <script src="js/menu.js"></script>
-
 </body>
 </html>
