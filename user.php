@@ -1,6 +1,8 @@
-	  		<div id="user"  class="col-3 pt-lg-4">
+
+				<div id="user"  class="col-3 pt-lg-4">
 	    		<div  id="card-user" class="card">
 	      		<div id="cd" class="card-body">
+						<form action="update.php" method="post" enctype="multipart/form-data">
 						 	<div title="Upload de imagem" style="cursor:pointer;" class="image-upload">
 								<label for="file-input">
 	   							<div class="hover-image">
@@ -8,10 +10,11 @@
 					  				<span class="texto">Adicione uma imagem</span>
 									</div>
 	    					</label>
-	    					<input id="file-input" style="cursor:pointer;" type="file" accept="image/jpeg,.jpg,image/png,.png,.jpeg,image/webp,.webp"/>
+	    					<input id="file-input" style="cursor:pointer;" type="file" required name="arquivo" accept="image/jpeg,.jpg,image/png,.png,.jpeg,image/webp,.webp"/>
 							</div>
+						</form>
 							<?php
-								require_once "crud/select.php";
+							require_once "select.php";
 							 	if(isset($_SESSION['cliente'])){
 							?>
 									<center>
